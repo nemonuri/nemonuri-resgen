@@ -8,10 +8,13 @@
 
     <ItemDefinitionGroup>
         <ResGenService>
-            <!-- Assembly, Project, Script, Executable -->
+            <!-- Assembly, Project, Script(planned), Executable(planned) -->
             <Kind></Kind> <!-- Required -->
 
             <!-- Valid If Kind is Project -->
+            <Targets>Build</Targets>
+            <Properties></Properties>
+            <RemoveProperties></RemoveProperties>
             <ExpectedOutputAssemblyPath></ExpectedOutputAssemblyPath> <!-- Required -->
 
             <!-- Valid If Kind is Assembly or Project -->
@@ -19,9 +22,9 @@
             <SourceType></SourceType>
             <SourceMethod></SourceMethod>
 
-            <!-- Valid If Kind is Script -->
-            <ScriptRuntimePath></ScriptRuntimePath> <!-- Required -->
-            <ModifiedArgs></ModifiedArgs> <!-- Required -->
+            <!-- Valid If Kind is Script(planned) -->
+            <!-- <ScriptRuntimePath></ScriptRuntimePath> --> <!-- Required -->
+            <!-- <ModifiedArgs></ModifiedArgs> --> <!-- Required -->
 
             <!-- Valid for All -->
             <Options></Options>
