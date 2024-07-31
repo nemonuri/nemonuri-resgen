@@ -5,5 +5,31 @@
     <Import Project="ExternalSdkVersions.props" />
 
     <Import Project="Sdk.props" Sdk="Microsoft.Build.NoTargets" Version="$(_Microsoft_Build_NoTargets_Version)"/>
+
+    <ItemDefinitionGroup>
+        <ResGenService>
+            <!-- Assembly, Project, Script, Executable -->
+            <Kind></Kind> <!-- Required -->
+
+            <!-- Valid If Kind is Project -->
+            <ExpectedOutputAssemblyPath></ExpectedOutputAssemblyPath> <!-- Required -->
+
+            <!-- Valid If Kind is Assembly or Project -->
+            <!-- SourceType or SourceMethod is required (not both) -->
+            <SourceType></SourceType>
+            <SourceMethod></SourceMethod>
+
+            <!-- Valid If Kind is Script -->
+            <ScriptRuntimePath></ScriptRuntimePath> <!-- Required -->
+            <ModifiedArgs></ModifiedArgs> <!-- Required -->
+
+            <!-- Valid for All -->
+            <Options></Options>
+            <ExpectedOutputResourcePath></ExpectedOutputResourcePath> <!-- Required -->
+            <CopyTo></CopyTo> <!-- Required -->
+            <CopyForce>true</CopyForce>
+            <DeleteAfterCopy>true</DeleteAfterCopy>
+        </ResGenService>
+    </ItemDefinitionGroup>
     
 </Project>
