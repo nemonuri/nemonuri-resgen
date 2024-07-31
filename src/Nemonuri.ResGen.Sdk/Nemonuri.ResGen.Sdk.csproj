@@ -5,5 +5,9 @@
     <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="Sdk/**" Pack="true" PackagePath="Sdk/" />
+  </ItemGroup>
+
   <Import Project="Directory.PackageMetadata.props" />
 </Project>
